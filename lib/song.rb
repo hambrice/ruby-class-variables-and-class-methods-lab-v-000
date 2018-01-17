@@ -23,17 +23,13 @@ class Song
        @@artists.uniq
      end
   def self.genre_count
-    binding.pry
     genre_hash = {}
-    binding.pry
     @@genres.uniq.each do |genre|
       genre_hash[genre] = 0
     end
-    binding.pry
     @@genres.each do |genre|
       genre_hash[genre] += 1 
     end
-    binding.pry
     genre_hash
   end
   def self.artist_count
